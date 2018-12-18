@@ -1,0 +1,19 @@
+package com.bolsadeideas.springboot.backend.apirest.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bolsadeideas.springboot.backend.apirest.models.services.IClienteServices;
+
+public class ClienteRestController {
+	
+	@Autowired
+	private IClienteServices clienteService;
+	
+	public List<Cliente> index(){
+		return clienteService.findAll();
+	}
+	
+	
+	
+
+}
